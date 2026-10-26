@@ -1,0 +1,99 @@
+body {
+    background: linear-gradient(to bottom, #0b0033, #45003d);
+    overflow-x: hidden;
+    animation: starMove 200s linear infinite;
+    color: #e0e0ff;
+    font-family: 'Poppins', sans-serif;
+}
+
+@keyframes starMove {
+    0% { background-position: 0 0, 40px 60px; }
+    100% { background-position: 10000px 0, 10000px 60px; }
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+    text-shadow:
+        0 0 5px #a64ca6,
+        0 0 20px #7b2ff7,
+        0 0 40px #7b2ff7;
+    letter-spacing: 8px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    color: #cda6f7;
+}
+
+.zodiaco-grid li {
+    background: linear-gradient(145deg, rgba(97, 49, 190, 0.85), rgba(44, 12, 87, 0.85));
+    border: 2px solid #a64ca6;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow:
+        0 0 10px #cc99ff,
+        0 0 30px #a64ca6,
+        inset 0 0 12px rgba(255, 255, 255, 0.15);
+    transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+}
+
+.zodiaco-grid li:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow:
+        0 0 20px #ff69b4,
+        0 0 40px #ff1493,
+        inset 0 0 20px rgba(255, 105, 180, 0.6);
+    border-color: #ff69b4;
+}
+
+.zodiaco-grid li strong {
+    font-size: 1.6rem;
+    color: #ff69b4;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow:
+        0 0 5px #ff69b4,
+        0 0 15px #ff1493;
+}
+
+.zodiaco-grid li:hover strong {
+    color: #ffeefb;
+    text-shadow:
+        0 0 20px #ff69b4,
+        0 0 30px #ff1493;
+}
+
+.img-contenedor {
+    width: 100%;
+    height: 280px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 0 25px #ff69b4 inset;
+    transition: box-shadow 0.5s ease;
+}
+
+.zodiaco-grid li:hover .img-contenedor {
+    box-shadow: 0 0 40px #ff1493 inset;
+}
+
+.zodiaco-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.6s ease;
+}
+
+.zodiaco-grid li:hover img {
+    transform: scale(1.1) rotate(1deg);
+}
+
+.descripcion {
+    font-size: 1rem;
+    color: #ebb4d8;
+    font-style: italic;
+    letter-spacing: 0.8px;
+    text-shadow: 0 0 5px #ff69b4a0;
+}
