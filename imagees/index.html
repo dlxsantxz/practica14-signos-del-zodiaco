@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horóscopo y Signos del Zodiaco</title>
+    <style>
+        /* --- ESTILOS GENERALES (TEMÁTICA MÍSTICA / ESPACIAL) --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: #080612; /* Fondo espacio profundo */
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px);
+            background-size: 550px 550px, 350px 350px;
+            background-position: 0 0, 40px 60px; /* Efecto sutil de estrellas */
+            color: #f1f1f7;
+            padding: 40px 20px;
+            line-height: 1.5;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 40px;
+            text-shadow: 0 0 15px rgba(147, 51, 234, 0.6); /* Resplandor morado */
+        }
+
+        /* --- CUADRÍCULA DE SIGNOS --- */
+        /* Reemplazamos la lista vertical por un Grid moderno sin viñetas */
+        .zodiaco-grid {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* --- TARJETAS DE CADA SIGNO --- */
+        .zodiaco-grid li {
+            background: linear-gradient(135deg, #130f26 0%, #1a153b 100%);
+            border: 1px solid rgba(147, 51, 234, 0.2); /* Borde morado sutil */
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            overflow: hidden;
+        }
+
+        /* Efecto al pasar el cursor sobre la tarjeta */
+        .zodiaco-grid li:hover {
+            transform: translateY(-5px);
+            border-color: #dfb73c; /* Cambia a dorado */
+            box-shadow: 0 15px 30px rgba(223, 183, 60, 0.25);
+        }
+
+        /* Nombre del Signo */
+        .zodiaco-grid li strong {
+            display: block;
+            font-size: 1.4rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .zodiaco-grid li:hover strong {
+            color: #dfb73c; /* Nombre se vuelve dorado en hover */
+        }
+
+        /* Contenedor e Imágenes */
+        .img-contenedor {
+            width: 100%;
+            height: 250px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            background-color: #0a0814;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        .zodiaco-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Hace que todas las imágenes midan idéntico sin deformarse */
+            transition: transform 0.5s ease;
+        }
+
+        .zodiaco-grid li:hover img {
+            transform: scale(1.06); /* Zoom sutil a la foto */
+        }
+
+        /* Texto de descripción inferior */
+        .descripcion {
+            font-size: 0.95rem;
+            color: #9ca3af;
+            text-transform: capitalize;
+            letter-spacing: 0.5px;
+        }
+
+        /* --- RESPONSIVO --- */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            body { padding: 20px 10px; }
+            .zodiaco-grid { gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Signos del Zodiaco</h1>
+
+    <!-- Corrección: Se cambió la etiqueta inválida <lo> por una lista clase <ul> estructurada -->
+    <ul class="zodiaco-grid">
+        <li>
+            <strong>Aries</strong>
+            <div class="img-contenedor">
+                <!-- Corrección: de "imagees/" a "imagenes/" -->
+                <img src="Aries.webp" alt="Aries">
+            </div>
+            <span class="descripcion">Imagen de Aries</span>
+        </li>
+
+        <li>
+            <strong>Piscis</strong>
+            <div class="img-contenedor">
+                <!-- Corrección: Ortografía de "picis" a "Piscis" -->
+                <img src="Piscis 2.webp" alt="Piscis">
+            </div>
+            <span class="descripcion">Imagen de Piscis</span>
+        </li>
+
+        <li>
+            <strong>Tauro</strong>
+            <div class="img-contenedor">
+                <img src="tauro 2.webp" alt="Tauro">
+            </div>
+            <span class="descripcion">Imagen de tauro</span>
+        </li>
+
+        <li>
+            <strong>Libra</strong>
+            <div class="img-contenedor">
+                <img src="Libra 2.jpg" alt="Libra">
+            </div>
+            <span class="descripcion">Imagen de libra</span>
+        </li>
+
+        <li>
+            <strong>Capricornio</strong>
+            <div class="img-contenedor">
+                <img src="Capricornio 2.jpg" alt="Capricornio">
+            </div>
+            <span class="descripcion">Imagen de capricornio</span>
+        </li>
+
+        <li>
+            <strong>Escorpio</strong>
+            <div class="img-contenedor">
+                <img src="Escorpio 2.jpg" alt="Escorpio">
+            </div>
+            <span class="descripcion">Imagen de escorpio</span>
+        </li>
+
+        <li>
+            <strong>Leo</strong>
+            <div class="img-contenedor">
+                <img src="Leo.jpg" alt="Leo">
+            </div>
+            <span class="descripcion">Imagen de leo</span>
+        </li>
+
+        <li>
+            <strong>Cáncer</strong>
+            <div class="img-contenedor">
+                <img src="Cancer 2.jpg" alt="Cáncer">
+            </div>
+            <span class="descripcion">Imagen de cáncer</span>
+        </li>
+
+        <li>
+            <strong>Sagitario</strong>
+            <div class="img-contenedor">
+                <img src="Sagitario 2.jpg" alt="Sagitario">
+            </div>
+            <span class="descripcion">Imagen de sagitario</span>
+        </li>
+
+        <li>
+            <strong>Acuario</strong>
+            <div class="img-contenedor">
+                <img src="Acuario 2.jpg" alt="Acuario">
+            </div>
+            <span class="descripcion">Imagen de acuario</span>
+        </li>
+
+        <li>
+            <strong>Géminis</strong>
+            <div class="img-contenedor">
+                <img src="Geminis 2.webp" alt="Géminis">
+            </div>
+            <span class="descripcion">Imagen de géminis</span>
+        </li>
+
+        <li>
+            <strong>Virgo</strong>
+            <div class="img-contenedor">
+                <img src="Virgo 2.jpg" alt="Virgo">
+            </div>
+            <span class="descripcion">Imagen de virgo</span>
+        </li>
+    </ul>
+
+</body>
